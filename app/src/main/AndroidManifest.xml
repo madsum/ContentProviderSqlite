@@ -21,7 +21,10 @@
             android:name="com.masum.todos.TodoDetailActivity"
             android:windowSoftInputMode="stateVisible|adjustResize" >
         </activity>
-
+        <!-- android:exported="true" makes  this provider data accessible form other application
+       android:multiprocess="true" makes  permits an instance of the provider to be created
+       in each client process, eliminating the need to perform interprocess communication (IPC)
+        -->
         <provider
             android:name="com.masum.contentprovider.MyTodoContentProvider"
             android:authorities="authorities.todos.contentprovider"
